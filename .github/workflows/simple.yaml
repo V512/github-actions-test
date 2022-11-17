@@ -5,6 +5,7 @@ on: [push]
 jobs:
   run-shell-command:
     runs-on: ubuntu-latest
+    environment: env
     steps:
       - name: echo a string
         run: echo "Hello World"
@@ -20,6 +21,7 @@ jobs:
 
   run-windows-commands:
     runs-on: windows-latest
+    environment: env
     steps:
       - name: Directory PowerShell
         run: Get-Location
