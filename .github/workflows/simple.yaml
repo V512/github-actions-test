@@ -1,11 +1,10 @@
 name: Shell Commands
 
 on: 
-   schedule:
-     - cron: "*/5 * * * *"
-     - cron: "*/6 * * * *"
-   pull_request:
-     types: [closed, assigned, opened, reopened]
+    repository_dispatch:
+     types: [build]
+    pull_request:
+      types: [closed, assigned, opened, reopened]
    
    
 
