@@ -13,6 +13,8 @@ jobs:
     runs-on: ubuntu-latest
     environment: env
     steps:
+      - name: payload
+        run: echo ${{ github.event.client_payload.env }} 
       - name: echo a string
         run: echo "Hello World"
       - name: multiline script
