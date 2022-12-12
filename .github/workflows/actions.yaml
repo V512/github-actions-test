@@ -2,8 +2,13 @@ name: Action Workflow
 
 on: 
   push:
-  pull_request:
-    types: [closed, assigned, opened, reopened]
+    branches:
+      - master
+      - 'feature/*' # mateches feature/featA, feature/featB,
+      - 'feature/**' # matches feature/feat/A
+    tags:
+      - v1.*  
+
 
 jobs:
   run-github-actions:
